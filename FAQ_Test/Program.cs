@@ -10,7 +10,7 @@ namespace FAQ_Test
     {
         static void Main(string[] args)
         {
-            TestExamples.StructVsClass();
+            TestExamples.ArrayZeroAndOnes();
 
             Console.ReadLine();
         }

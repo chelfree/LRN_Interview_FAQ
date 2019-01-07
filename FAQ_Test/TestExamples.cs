@@ -84,5 +84,59 @@ namespace FAQ_Test
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nThe end");
         }
+
+        public static void ArrayZeroAndOnes()
+        {
+            int[] curArray = new int[] { 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1 };
+
+            int commonSumm = 0;
+            int countOnes = 0;
+
+            //в один проход с конца
+            for (int i = curArray.Length - 1; i >= 0; i--)
+            {
+                if (curArray[i] == 0)
+                {
+                    commonSumm += countOnes;
+                }
+                else
+                {
+                    countOnes++;
+                }
+            }
+
+            //в один проход с начала
+            //for (var i = 0; i < curArray.Length; i++)
+            //{
+            //    if (curArray[i] == 0)
+            //    {
+            //        countOnes++;
+            //    }
+            //    else
+            //    {
+            //        commonSumm += countOnes;
+            //    }
+            //}
+
+            //for (int i = 0; i < curArray.Length; i++)
+            //{
+            //    if (curArray[i] == 0)
+            //    {
+            //        int countOnes = 0;
+
+            //        for (int j = i + 1; j < curArray.Length; j++)
+            //        {
+            //            if (curArray[j] == 1)
+            //            {
+            //                countOnes++;
+            //            }
+            //        }
+
+            //        commonSumm += countOnes;
+            //    }
+            //}
+
+            Console.WriteLine("Common summ = {0}", commonSumm);
+        }
     }
 }
